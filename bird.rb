@@ -16,6 +16,12 @@ class Bird < Gosu::Window
     @gravity += 0.4
   end
 
+  def fly
+    @y -= @gravity + 8
+    @angle -= 6.0 if @angle > -45.0
+    @gravity = 0
+  end
+
   # Overridden methods
   def draw
     @image.draw_rot(@x, @y, 1, @angle)
