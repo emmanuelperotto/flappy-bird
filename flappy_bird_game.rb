@@ -24,8 +24,8 @@ class FlappyBirdGame < Gosu::Window
   def update
     close if Gosu.button_down? Gosu::KB_ESCAPE
     if Gosu.button_down? Gosu::MS_LEFT
-      @game_started = true 
-      @bird.fly 
+      @game_started = true
+      @bird.fly
     end
   end
 
